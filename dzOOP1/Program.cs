@@ -8,18 +8,7 @@ namespace dzOOP
 {
     class Program
     {
-        static Weather FindWeatherWithLargestWindchill(Weather[] weathers)
-        {
-            Weather max = weathers[0];
-            for (int i = 0; i < weathers.Length; i++)
-            {
-                if (max.CalculateWindChill() < weathers[i].CalculateWindChill())
-                {
-                    max = weathers[i];
-                }
-            }
-            return max;
-        }
+        
 
         static void Main(string[] args)
         {
@@ -45,7 +34,7 @@ namespace dzOOP
                 weathers[i] = new Weather(temperatures[i], humidities[i], windSpeeds[i]);
                 Console.WriteLine("Windchill for weathers[" + i + "] is: " + weathers[i].CalculateWindChill());
             }
-            Weather largestWindchill = FindWeatherWithLargestWindchill(weathers);
+            Weather largestWindchill = Weather.FindWeatherWithLargestWindchill(weathers);
             Console.WriteLine(
                 "Weather info:" + largestWindchill.GetTemperature() + ", " +
                 largestWindchill.GetHumidity() + ", " + largestWindchill.GetWindSpeed()

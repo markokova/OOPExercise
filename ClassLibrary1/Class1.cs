@@ -31,7 +31,7 @@ Radite sustav koji omogućuje rad s informacijama o wremenskim prilikama.Vremens
 * Svaka klasa ide u zasebnu datoteku, imena jednakog kao i klasa
 * Kreirati dva projekta unutar solutiona, jedan koji će biti definiran kao* class library* i u kojem će biti logika rješenja, a drugi koji će biti konzolna aplikacija i koji će predstavljati UI.Referencirati projekt s rješenjem u projektu koji predstavlja UI i na taj način rabiti njegove elemente.
 * Koristiti.NET Core projekte u VS-u.
-* Uploadati rješenje na Github, na privatni repozitorij.
+* Uploadati rješenje na Github, na privatni repozitorij.  
 * Zalijepiti link na repozitorij na odgovarajuće mjesto na Merlinu za predaju zadaće.
 * Nakon isteka roka za zadaću učiniti repozitorij javnim kako bi mogao biti ocijenjen.
 * Prepisivanje je strogo zabranjeno i bit će kažnjavano (i za izvor i za prepisivača!).
@@ -143,15 +143,14 @@ Weather info:8.33, 0.379, 4.8
 
             public double CalculateFeelsLikeTemperature()
             {
-                //return 16.923 + 0.185212 * temp + 5.37941 * humidity * 100 - -0.100254 * temp * humidity * 100 + 9.41695 * Math.Pow(10, -3) * temp * temp +7.28898 * Math.Pow(10, -3) * humidity * humidity * 10000 + 3.45372 * Math.Pow(10, -4) * temp * temp * humidity * 100 - 8.14971 * Math.Pow(10, -4) * temp * humidity * humidity * 10000 + 1.02102 * Math.Pow(10, -5) * temp * temp * humidity * humidity * 10000 - 3.8646 * Math.Pow(10,-5) * Math.Pow(temp,3) + 2.91583 * Math.Pow(10,-5)*Math.Pow(humidity,3)*1000000 + 1.42721+ Math.Pow(10,-6)*Math.Pow(temp,3)*humidity*100 + 1.97483 * Math.Pow(10,-7)*temp*Math.Pow(humidity,3)*1000000 - 2.18429*Math.Pow(10,-8)*Math.Pow(temp,3)*humidity*humidity*10000 + 8.43296 * Math.Pow(10,-10)*temp*temp*Math.Pow(humidity,3)*1000000 - 4.81975* Math.Pow(10,-11)*Math.Pow(temp,3)*Math.Pow(humidity,3)*1000000;
-
-
-                //return 0.363445176 + 0.988622465 * temp + 4.777114035 * humidity * 100 - -0.114037667 * temp * humidity * 100 -8.50208 * Math.Pow(10, -4) * temp * temp - 2.0716198 * Math.Pow(10, -2) * humidity * humidity * 10000 + 6.87678 * Math.Pow(10, -4) * temp * temp * humidity * 100 + 2.74954 * Math.Pow(10, -4) * temp * humidity * humidity * 10000 - 0 * Math.Pow(10, -6) * temp * temp * humidity * humidity * 10000;
-                //return -42.379 + 2.04901523 * temp + 10.14333127 * humidity * 100 - 0.22475541 * temp * humidity * 100 - 6.83783 * Math.Pow(10, -3) * temp * temp - 5.481717 * Math.Pow(10, -2) * humidity * humidity * 10000 + 1.22874 * Math.Pow(10, -3) * temp * temp * humidity * 100 + 8.5282 * Math.Pow(10, -4) * temp * humidity * humidity * 10000 - 1.99 * Math.Pow(10, -6) * temp * temp * humidity * humidity * 10000;
-                if (temp > 27 && humidity > 0.4)
-                    /*ovaj je do sad kao najboljo*/
-                    return -8.78469475556 + 1.61139411 * temp + 2.33854883889 * humidity * 100 - 0.14611605 * temp * humidity * 100 - 0.012308094 * temp * temp - 0.0164248277778 * humidity * humidity * 10000 + 0.002211732 * temp * temp * humidity * 100 + 0.00072546 * temp * humidity * humidity * 10000 - 0.000003582 * temp * temp * humidity * humidity * 10000;
-                else return temp;
+            //return 16.923 + 0.185212 * temp + 5.37941 * humidity * 100 - -0.100254 * temp * humidity * 100 + 9.41695 * Math.Pow(10, -3) * temp * temp +7.28898 * Math.Pow(10, -3) * humidity * humidity * 10000 + 3.45372 * Math.Pow(10, -4) * temp * temp * humidity * 100 - 8.14971 * Math.Pow(10, -4) * temp * humidity * humidity * 10000 + 1.02102 * Math.Pow(10, -5) * temp * temp * humidity * humidity * 10000 - 3.8646 * Math.Pow(10,-5) * Math.Pow(temp,3) + 2.91583 * Math.Pow(10,-5)*Math.Pow(humidity,3)*1000000 + 1.42721+ Math.Pow(10,-6)*Math.Pow(temp,3)*humidity*100 + 1.97483 * Math.Pow(10,-7)*temp*Math.Pow(humidity,3)*1000000 - 2.18429*Math.Pow(10,-8)*Math.Pow(temp,3)*humidity*humidity*10000 + 8.43296 * Math.Pow(10,-10)*temp*temp*Math.Pow(humidity,3)*1000000 - 4.81975* Math.Pow(10,-11)*Math.Pow(temp,3)*Math.Pow(humidity,3)*1000000;
+            //return 0.363445176 + 0.988622465 * temp + 4.777114035 * humidity * 100 - -0.114037667 * temp * humidity * 100 -8.50208 * Math.Pow(10, -4) * temp * temp - 2.0716198 * Math.Pow(10, -2) * humidity * humidity * 10000 + 6.87678 * Math.Pow(10, -4) * temp * temp * humidity * 100 + 2.74954 * Math.Pow(10, -4) * temp * humidity * humidity * 10000 - 0 * Math.Pow(10, -6) * temp * temp * humidity * humidity * 10000;
+            //return -42.379 + 2.04901523 * temp + 10.14333127 * humidity * 100 - 0.22475541 * temp * humidity * 100 - 6.83783 * Math.Pow(10, -3) * temp * temp - 5.481717 * Math.Pow(10, -2) * humidity * humidity * 10000 + 1.22874 * Math.Pow(10, -3) * temp * temp * humidity * 100 + 8.5282 * Math.Pow(10, -4) * temp * humidity * humidity * 10000 - 1.99 * Math.Pow(10, -6) * temp * temp * humidity * humidity * 10000;
+            // if (temp > 27 && humidity < 0.4)
+            /*ovaj je do sad kao najbolji*/
+            //   return -8.78469475556 + 1.61139411 * temp + 2.33854883889 * humidity * 100 - 0.14611605 * temp * humidity * 100 - 0.012308094 * temp * temp - 0.0164248277778 * humidity * humidity * 10000 + 0.002211732 * temp * temp * humidity * 100 + 0.00072546 * temp * humidity * humidity * 10000 - 0.000003582 * temp * temp * humidity * humidity * 10000;
+            //else return temp;
+            return 2;
             }
 
             public double CalculateWindChill()

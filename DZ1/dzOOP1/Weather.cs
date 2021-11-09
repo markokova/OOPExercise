@@ -62,8 +62,9 @@ namespace dzOOP
 
         public double CalculateFeelsLikeTemperature()
         {
-            return -8.78469475556 + 1.61139411 * temp + 2.33854883889 * humidity * 100 - 0.14611605 * temp * humidity * 100 - 0.012308094 * temp * temp - 0.0164248277778 * humidity * humidity * 10000 + 0.002211732 * temp * temp * humidity * 100 + 0.00072546 * temp * humidity * humidity * 10000 - 0.000003582 * temp * temp * humidity * humidity * 10000;
-
+            temp = temp * 1.8 + 32;
+            double result = -42.379 + 2.04901523 * temp + 10.14333127 * humidity + -0.22475541 * temp * humidity + -6.83783 * Math.Pow(10,-3) * temp * temp + -5.481717 * Math.Pow(10, -2) * humidity * humidity + 1.22874 * Math.Pow(10, -3) * temp * temp * humidity + 8.5282 * Math.Pow(10, -4) * temp * humidity * humidity + -1.99 * Math.Pow(10, -6) * temp * temp * humidity * humidity;
+            return (result - 32) / 1.8;
         }
 
         public double CalculateWindChill()
